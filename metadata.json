@@ -1,0 +1,6 @@
+{
+  "name": "SM Multimedia - Photography, Videography & IT Services",
+  "description": "Official website for SM Multimedia (Proprietor: Sangeet Mahal) offering professional photography, 4K videography, drone shoots, wedding mixing, album design, computer sales/service, CCTV installation, data recovery, and technical training in Purulia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

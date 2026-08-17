@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Safeguard against runtime errors when packages/extensions attempt to overwrite window.fetch
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var fetchHolder = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return fetchHolder;
+            },
+            set: function(val) {
+              fetchHolder = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // ignore if already configured
+        }
+      })();
+    </script>
+    <title>SM Multimedia | Capture Moments, Create Stories</title>
+    <meta name="description" content="SM Multimedia (Proprietor: Sangeet Mahal) - Professional Photography, Videography, Drone Shoots, Wedding Mixing, Album Design, Computer Sales & Service, CCTV Installation & Data Recovery in Purulia." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta property="og:title" content="SM Multimedia - Purulia" />
+    <meta property="og:description" content="Capture Moments, Create Stories - Photography, Videography & IT Solutions" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-red-600 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
